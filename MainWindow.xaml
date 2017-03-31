@@ -1,0 +1,38 @@
+﻿<Window x:Class="DoctorsHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoctorsHelper"
+        mc:Ignorable="d"
+        Title="Doctor Helper" Height="711" Width="1280" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF020202" ResizeMode="NoResize">
+    <Grid x:Name="Main">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="DimGray" Offset="0"/>
+                <GradientStop Color="#FF7C7C7C" Offset="1"/>
+                <GradientStop Color="#FFBFBABA" Offset="0.514"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid x:Name="LogIn" Margin="515.6,157,515.6,152" Visibility="Hidden" d:IsLocked="True">
+            <Border BorderBrush="DimGray" BorderThickness="1"/>
+            <Label x:Name="nameL" Content="Name" Margin="10,10,10,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" Height="33.42"/>
+            <Label x:Name="surnameL" Content="Surname" Margin="10,83.6,10,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" Height="33.42"/>
+            <TextBox x:Name="nameTB" Height="30.18" Margin="10,48.42,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="surnameTB" Margin="10,122.02,10,0" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" Height="30.18" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+            <Label x:Name="dateL" Content="Date of birth (dd-mm-rrrr)" Margin="10,157.2,10,176.58" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="dateTB" Margin="10,0,10,141.4" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" Height="30.18" VerticalAlignment="Bottom"/>
+            <Label x:Name="passL" Content="Password" Margin="10,0,10,102.98" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" Height="33.42"/>
+            <Button x:Name="logInB" Content="LOG IN" Margin="10,0,10,15.04" VerticalAlignment="Bottom" Height="47.76" FontWeight="Bold" FontSize="18" Click="logInB_Click"/>
+            <PasswordBox x:Name="passTB" Margin="10,0,10,67.8" Height="30.18" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"/>
+        </Grid>
+        <Menu x:Name="menu" Height="31.2" VerticalAlignment="Top">
+            <MenuItem x:Name="menuSystem" Header="System" Height="31.2" Width="134.933" HorizontalContentAlignment="Center" Margin="0" Padding="50,0,6,0">
+                <MenuItem x:Name="ChangeUser" Header="Change user" Click="ChangeUser_Click"/>
+                <MenuItem x:Name="SelectDatabase" Header="Select database"/>
+                <MenuItem x:Name="Exit" Header="Exit" Click="Exit_Click"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>
